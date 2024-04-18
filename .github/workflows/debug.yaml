@@ -16,7 +16,7 @@ permissions:
 jobs:
   debug:
     name: job-${{ matrix.runson }}
-    runs-on: [matrix.runson]
+    runs-on: ${{matrix.runson}}
     strategy:
       matrix:
         runson: [actuated-8cpu-8gb,ubuntu-latest]
