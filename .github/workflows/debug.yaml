@@ -19,7 +19,7 @@ jobs:
     runs-on: ${{matrix.runson}}
     strategy:
       matrix:
-        runson: [actuated-8cpu-8gb,ubuntu-latest]
+        runson: [ubuntu-latest]
     steps:
     - uses: actions/checkout@v1
     - name: Configure buildx
