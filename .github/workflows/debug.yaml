@@ -1,13 +1,13 @@
 name: CI
 
 on:
-  pull_request:
-    branches:
-      - '*'
-  push:
-    branches:
-      - master
-      - main
+  # pull_request:
+  #   branches:
+  #     - '*'
+  # push:
+  #   branches:
+  #     - master
+  #     - main
   workflow_dispatch:
 
 permissions:
@@ -19,7 +19,7 @@ jobs:
     runs-on: ${{matrix.runson}}
     strategy:
       matrix:
-        runson: [ubuntu-latest]
+        runson: [ubuntu-latest,actuated-4cpu-8gb]
     steps:
     - uses: actions/checkout@v1
     - name: Configure buildx
