@@ -19,7 +19,8 @@ jobs:
     runs-on: ${{matrix.runson}}
     strategy:
       matrix:
-        runson: [ubuntu-latest,actuated-4cpu-8gb]
+        # runson: [ubuntu-latest,actuated-4cpu-8gb]
+        runson: [ubuntu-latest]
     steps:
     - uses: actions/checkout@v1
     - name: Configure buildx
@@ -27,3 +28,4 @@ jobs:
       with:
         cache-binary: true
     - uses: self-actuated/connect-ssh@master
+
